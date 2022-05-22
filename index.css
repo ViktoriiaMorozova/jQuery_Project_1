@@ -50,3 +50,18 @@ h2 {
     line-height: 15px;
 }
 
+#buttonAdd {
+    border: solid;
+    border-color: rgb(69, 13, 13);
+    border-radius: 4px;
+    background-color: rgb(203, 98, 98);
+    width: 30%;
+}
+
+#buttonClear {
+    border: solid;
+    border-color: rgb(69, 13, 13);
+    border-radius: 4px;
+    background-color: rgb(203, 98, 98);
+    width: 30%;
+}
