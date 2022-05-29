@@ -26,13 +26,22 @@
     opacity: 0.5;
 }
 h2 {
-    color: red;
     font-size: large;
 }
  #container {
      display: flex;
      flex-wrap: nowrap;
-     background-color: rgb(254, 248, 248);
+    background-color: rgb(254, 248, 248);
+ }
+ 
+ h3 {
+    color: rgb(212, 20, 20);
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-stretch: expanded;
+    font-style: oblique;
+    text-align: center;
  }
 
  #box1 {
@@ -42,26 +51,39 @@ h2 {
     text-align: left;
     line-height: 15px;
  }
+
 #box2 {
     background-color: #f1f1f1;
     width: 50%;
     margin: 10px;
     text-align: left;
     line-height: 15px;
+} */
+
+#buttons {
+    border: solid;
+    border-radius: 4px;
+    width: 30%;
+    border-color: rgb(122, 106, 94);
 }
 
-#buttonAdd {
-    border: solid;
-    border-color: rgb(69, 13, 13);
-    border-radius: 4px;
-    background-color: rgb(203, 98, 98);
-    width: 30%;
+p {
+    color: rgb(212, 20, 20);
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-stretch: expanded;
+    font-style: oblique;
+    text-align: center;
 }
 
-#buttonClear {
-    border: solid;
-    border-color: rgb(69, 13, 13);
-    border-radius: 4px;
-    background-color: rgb(203, 98, 98);
-    width: 30%;
+#container_add p {
+    color: rgb(212, 20, 20);
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-stretch: expanded;
+    font-style: oblique;
+    text-align: left;
 }
+

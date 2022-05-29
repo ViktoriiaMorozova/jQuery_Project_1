@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+    <link rel="stylesheet" href="themes/MyNewTheme.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
     <link rel="stylesheet" href="index.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="index.js"></script>
-
     <title>Recipes</title>
 </head>
 
@@ -20,9 +21,9 @@
     <div data-role="page" id="home">
 
         <!-- header -->
-        <div data-role="header" data-theme='e' id = "headerHome">
+        <div data-role="header" data-theme='a' id = "headerHome">
 
-            <div data-role="navbar" data-theme='e'>
+            <div data-role="navbar" data-theme='a'>
                 <ul>
                     <li><a href="#add" data-transition="slideup">Add New Recipe</a></li>
                     <li><a href="#show" data-transition="slideup">Library of Recipes</a></li>
@@ -33,28 +34,28 @@
         </div>
 
         <!-- content -->
-        <div data-role="content" data-theme='a' id="container_home">
-            <h3></h3>You can keep five-ingredients recipes here. 
+        <div data-role="content" data-theme='d' id="container_home">
+            <h3>You can keep five-ingredients recipes here. 
             The main idea of this app is to collect 5-ingredients recipes for easy cooking.
                 You can add recipes, create your own recipes, search for recipes in the library, etc.
             </h3><br><br>
-            <div id="recipe_picture"> 
+            <div id="recipe_picture" > 
                 <img src="images/image3.webp" id="image" alt="recipe_picture">
             </div>
         </div>
 
         <!-- notes footer -->
-        <div data-role="footer" data-theme='b'>
-            <h3>Copyrigtht 2022 by Viktoriia Morozova</h3>
+        <div data-role="footer" data-theme='a'>
+            <h2>Copyrigtht 2022 by Viktoriia Morozova</h2>
         </div>
 
     </div> <!-- end of page -------------------------------------------->
 
-    <div data-role="page" id="add">
+    <div data-role="page" id="add" data-theme='a'>
 
         <!-- header -->
-        <div data-role="header" data-theme='e'>
-            <div data-role="navbar" data-theme='e'>
+        <div data-role="header" data-theme='a'>
+            <div data-role="navbar" data-theme='a'>
                 <ul>
                     <li><a href="#home" data-transition="slideup">Home</a></li>
                     <li><a href="#show" data-transition="slideup">Library of Recipes</a></li>
@@ -63,49 +64,47 @@
             </div>
             <h2>Create new recipe</h2>
         </div>
-        <div id="recipe_picture2">
+        <div id="recipe_picture2" >
             <img src="images/image3.webp" id="image2" alt="recipe_picture">
         </div>
         
         <!-- content -->
         <div data-role="content" data-theme='d' id="container_add">
-            Name of a recipe <br/>
+            <p>Name of a recipe</p>
             <input type="text" value="" id="RecipeNameInput"/>
-            Ingredient <br/>
+            <p>Ingredient</p>
             <input type="text" value="" id="Ingredient1Input" />
-            Ingredient<br>
+            <p>Ingredient</p>
             <input type="text" value="" id="Ingredient2Input" />
-            Ingredient <br/>
+            <p>Ingredient</p>
             <input type="text" value="" id="Ingredient3Input" />
-            Ingredient<br>
+            <p>Ingredient</p>
             <input type="text" value="" id="Ingredient4Input" />
-            Ingredient<br>
+            <p>Ingredient</p>
             <input type="text" value="" id="Ingredient5Input" />
-            Equipment<br/>
+            <p>Equipment</p>
             <input type="text" value="" id="EquipmentInput" />
-            Method<br/>
+            <p>Method</p>
             <input type="text" value="" id="MethodInput" />
-            <label for="select-type">Select a category of a meal</label>
-            <select name="select-type" id="select-type">
+            <label for="select-type"><p>Select a category of a meal</p></label>
+            <select name="select-type" id="Category">
                 <option value=""></option>
                 <option value="Breakfast">Breakfast</option>
                 <option value="Lunch">Lunch</option>
                 <option value="Dinner">Dinner</option>
                 <option value="Dessert">Dessert</option>
             </select>
-
-            <!-- <input type="button" value="click to add recipe" id="buttonAdd" data-inline=""true">Add Recipe</button>
-            <input type="button" value=" click to clear" id="buttonClear" data-inline="" true">Clear</button> -->
-            <fieldset>
+            <div id="buttons">
+            <!-- <fieldset> -->
             <button class="submitRecipe" id="buttonAdd" type="submit" data-inline="true">Add Recipe</button>
             <button class="clearRecipe" id="buttonClear" type="submit" data-inline="true">Clear Data</button>
-            </fieldset>
-
+            <!-- </fieldset> -->
+            </div>
             <br>
             <a href="#popupMenu" data-rel="popup" data-transition="slideup"
                 class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">What
                 next?</a>
-            <div data-role="popup" id="popupMenu" data-theme="b">
+            <div data-role="popup" id="popupMenu" data-theme='a'>
                 <ul data-role="listview" data-inset="true" style="min-width:210px;">
                     <li data-role="list-divider">Choose an action</li>
                     <li><a href="#home" data-transition="slideup">Back to Home</a></li>
@@ -116,8 +115,8 @@
         </div>
 
         <!-- notes footer -->
-        <div data-role="footer" data-theme='b'>
-            <h3>Copyrigtht 2022 by Viktoriia Morozova</h3>
+        <div data-role="footer" data-theme='a'>
+            <h2>Copyrigtht 2022 by Viktoriia Morozova</h2>
         </div>
 
     </div> <!-- end of page --------------------------------------->
@@ -125,9 +124,9 @@
     <div data-role="page" id="show">
     
         <!-- header -->
-        <div data-role="header" data-theme='e'>
+        <div data-role="header" data-theme='a'>
             <!-- /navbar -->
-            <div data-role="navbar" data-theme='e'>
+            <div data-role="navbar" data-theme='a'>
                 <ul>
                     <li><a href="#home" data-transition="pop">Home Page</a></li>
                     <li><a href="#add" data-transition="pop">Add New Recipe</a></li>
@@ -143,23 +142,23 @@
         <br><br>
             
         <!-- content -->
-        <div data-role="content" id="recipeList" data-theme='c'>
+        <div data-role="content" id="recipeList" data-theme='a'>
             <ul id="myUl" data-role="listview">
             </ul>
         </div>
     
         <!-- notes footer -->
-        <div data-role="footer" data-theme='b'>
-            <h3>Copyrigtht 2022 by Viktoriia Morozova</h3>
+        <div data-role="footer" data-theme='a'>
+            <h2>Copyrigtht 2022 by Viktoriia Morozova</h2>
         </div>
     </div> <!-- end of page ----------------------------------->
 
     <div data-role="page" id="search">
     
         <!-- header -->
-        <div data-role="header" data-theme='e'>
+        <div data-role="header" data-theme='a'>
             <!-- /navbar -->
-            <div data-role="navbar" data-theme='e'>
+            <div data-role="navbar" data-theme='a'>
                 <ul>
                     <li><a href="#home" data-transition="slideup">Home Page</a></li>
                     <li><a href="#add" data-transition="slideup">Add New Recipe</a></li>
@@ -173,41 +172,35 @@
                 </div>
         <br><br>        
         <!-- content -->
-        <div data-role="content" data-theme='c'>
+        <div data-role="content" data-theme='d'>
             <ul id="myul" data-role="listview"></ul>
-            <strong>Search for a recipe </strong>(a user enters a name of a recipe and clicks the "search" button.
-            Recipes' names will be shown as links.)<br/>
-            <input type="text" value="" id="MethodInput"/>
-            <button id="buttonAdd">Search</button>
+            <p><strong>Search for Recipe </strong></p>
+            <br/>
+            <input type="text" value="" id="RecipeSearch"/>
+            <button class="searchRecipe" id="buttonSearch" type="submit" data-inline="true">Search Recipe</button>
             <div id = "container">
-                <div id = "box1"><strong>Name of the recipe</strong> (the search result will output to this field)
-                <ul name="yourlist" id="yourList" rows="10">
-                    <li>Recipe 1</li>
-                    <li>Recipe 2</li>
-                </ul>
+                <div id="box1">
                 </div>
-                <div id="box2"><strong>Method</strong> (after user clicks on the recipe's name in the left field,
-                the recipe's method will be displayed in this field)
-                <textarea name="yourlist" id="yourList2" rows="10"></textarea>
+                <div id="box2">
                 </div>
             </div>
 
         </div>
     
         <!-- notes footer -->
-        <div data-role="footer" data-theme='b'>
-            <h3>Copyrigtht 2022 by Viktoriia Morozova</h3>
+        <div data-role="footer" data-theme='a'>
+            <h2>Copyrigtht 2022 by Viktoriia Morozova</h2>
         </div>
     
     </div> <!-- end of page ----------------------------------->
 
 
-    <div data-role="page" id="details">
+    <div data-role="page" id="details" data-theme='a'>
     
         <!-- header -->
         <div data-role="header" data-theme='a'> 
             <!-- /navbar -->
-            <div data-role="navbar" data-theme='b'>
+            <div data-role="navbar" data-theme='a'>
                 <ul>
                     <li><a href="#add" data-transition="slideup">Add New Recipe</a></li>
                     <li><a href="#show" data-transition="slideup">Library of Recipes</a></li>
@@ -223,13 +216,18 @@
         <br><br>
     
         <!-- content -->
-        <div data-role="content" data-theme='c'>
-            <p id="recipeID"></p>
+        <div data-role="content" data-theme='a'>
+            <div id="recipe_name"></div>
+            <div id="ingredients"></div>
+            <div id="method"></div>
+            <div id="equipment"></div>
+            <div id="category"></div>
+            <div id="ID"></div>
         </div>
     
         <!-- notes footer -->
-        <div data-role="footer" data-theme='b'>
-            <h3>Copyrigtht 2022 by Viktoriia Morozova</h3>
+        <div data-role="footer" data-theme='a'>
+            <h2>Copyrigtht 2022 by Viktoriia Morozova</h2>
         </div>
     </div> <!-- end of page ----------------------------------->
     
