@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("Ingredient5Input").value,
             document.getElementById("MethodInput").value,
             document.getElementById("EquipmentInput").value,
-            document.getElementById("select-type").value));
+            document.getElementById("Category").value));
         createList();
     });
     document.getElementById("buttonClear").addEventListener("click", function() {
